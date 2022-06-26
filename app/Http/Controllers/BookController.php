@@ -15,7 +15,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        $books = Book::all();
+
+        return view('books.books', compact('books', 'books'));
     }
 
     /**
@@ -47,7 +49,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        //
+        return view('books.book', compact('book', 'book'));
     }
 
     /**
