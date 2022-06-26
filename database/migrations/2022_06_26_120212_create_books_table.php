@@ -18,8 +18,10 @@ return new class extends Migration
             $table->string('title');
             $table->string('content');
             $table->string('published_year');
-            $table->foreignId('author_id')->constrained('authors')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreignId('category_id')->constrained('categories')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('author_id');
+            $table->foreignId('category_id');
+            // $table->foreignId('author_id')->constrained('authors')->onUpdate('cascade')->onDelete('cascade');
+            // $table->foreignId('category_id')->constrained('categories')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
