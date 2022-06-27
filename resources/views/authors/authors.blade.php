@@ -8,7 +8,7 @@
 	@foreach ($authors as $author)
 	<tr>
 		<td>{{ $author->id }}</td>
-		<td>{{ $author->name }}</td>
+		<td>{{ add_filter_link($author->id, $author->name) }}</td>
 		<td>{{ $author->bio }}</td>
 	</tr>
 	@endforeach
